@@ -55,8 +55,8 @@ import { filterImageFromURL, deleteLocalFiles } from "./util/util";
       fileStream.end(async () => {
         await deleteLocalFiles([filteredpath]);
       });
-    } catch (error: any) {
-      return res.status(500).send(error.message);
+    } catch (error) {
+      return res.status(500).send("Ooops! error occurred please try again");
     }
   });
 
